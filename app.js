@@ -28,18 +28,6 @@ app.locals.title = `${capitalized(projectName)}`;
 const index = require('./routes/index');
 app.use('/', index);
 
-const movies = require('./routes/movies');
-app.use('/movies', movies);
-
-app.get('/movies', (req, res) => {
-    punkAPI
-      .getBeers()
-      .then(beersFromApi => {
-        res.render("beers.hbs", { totalBeers: beersFromApi });
-      })
-      .catch(error => console.log(error));
-  });
-
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require('./error-handling')(app);
 

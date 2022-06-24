@@ -1,8 +1,9 @@
-<h2> Este es el listado de peliculas</h2>
-
-{{#each totalBeers}}
-<img src='{{this.image_url}}' alt='beer' width='250px' height="500px" />
-<p>{{this.name}}</p>
-<p>{{this.description}}</p>
-<p>{{this.tagline}}</p>
+<h2> Este es el listado de peliculas:</h2>
+<section>
+{{#each response}}
+<img src='{{image}}' alt='movie' width='250px' height="250px" />
+<p>{{title}}</p>
+<a href="/details/{{id}}">See more</a>
+<br>
 {{/each}}
+</section>
