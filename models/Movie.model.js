@@ -8,18 +8,19 @@ const movieSchema = new mongoose.Schema({
         type: String
     },
     stars: {
-        type: [String],
-        image: {
-            type: String
-        },
-        description: {
-            type: String
-        },
-        showtimes: {
-            type: [String]
-        },
+        type: [String]
+    },
+    image: {
+        type: String
+    },
+    description: {
+        type: String
+    },
+    showtimes: {
+        type: [String]
+     },
     }
-})
+)
 
 const Movie = mongoose.model("Movie", movieSchema)
 module.exports = Movie
